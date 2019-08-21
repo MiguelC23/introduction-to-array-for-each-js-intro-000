@@ -1,15 +1,10 @@
-function iterativeLog(array) {
-  array.forEach((element, index) => {
-    console.log(`${index}: ${element}`)
-  })
+function changeCompletely(element, index, array) {
+  array[index] = Math.floor(Math.random() * 100 + 2).toString() + ` ${array[index]}s!!!`;
 }
-
-function iterate(callback) {
-  const lotteryNumbers = [2, 4, 5, 2]
-  lotteryNumbers.forEach(callback)
-  return lotteryNumbers
-}
-
-function doToArray(array, callback) {
-  array.forEach(callback)
-} 
+ 
+var animals = ["dog", "cat", "squirrel"];
+ 
+doToElementsInArray(animals, changeCompletely);
+ 
+// log out animals -- pretty cool, right?
+console.log(animals);
