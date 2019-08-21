@@ -1,11 +1,15 @@
-if (!Array.prototype.forEach) {
-  Array.prototype.forEach = function(fn){
-    for ( var i = 0; i < this.length; i++ ) {
-      fn( this[i], i, this );
-    }
-  };
+function iterativeLog(array) {
+  array.forEach((element, index) => {
+    console.log(`${index}: ${element}`)
+  })
 }
 
-["a", "b", "c"].forEach(function(value, index, array){
-  assert( value, "Is in position " + index + " out of " + (array.length - 1) );
-});
+function iterate(callback) {
+  const lotteryNumbers = [2, 4, 5, 2]
+  lotteryNumbers.forEach(callback)
+  return lotteryNumbers
+}
+
+function doToArray(array, callback) {
+  array.forEach(callback)
+} 
